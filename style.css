@@ -1,0 +1,23 @@
+body {
+    margin: 1em;
+    padding: 0;
+}
+
+nav {
+    display: flex;
+    background-color: #0c0c0c;
+    width: 100%;;
+}
+
+img {
+    width: 70%;
+    height: auto;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+    margin: auto;
+    
+}
