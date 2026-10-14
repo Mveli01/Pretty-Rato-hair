@@ -48,3 +48,12 @@ h2 {
 li {
     font-size: 1.2rem;
 }
+
+.location- {
+    display: flex;
+    margin: 2rem;
+}
+
+iframe {
+    border-radius: 2em;
+}
