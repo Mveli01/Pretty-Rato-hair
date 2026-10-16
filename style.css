@@ -1,19 +1,21 @@
 
 
 body {
-    margin: 0.5em;
-    padding: 0;
+    margin: 0;
+    padding: 0.5em 0;
 }
 
 nav {
     display: flex;
     background-color: #0c0c0c;
     width: 100%;
+    border-bottom: 0.5em solid #D4AF37;
 }
 
 img {
     width: 70%;
     height: auto;
+
 }
 
 .nav-links {
@@ -33,6 +35,11 @@ main {
     text-align: center;
     background-color: #161616;
     color: white;
+    border-top: 0.5em solid #D4AF37;
+}
+
+.service-section {
+    margin-bottom: -8em;
 }
 
 h1 {
@@ -49,6 +56,7 @@ h2 {
     display: flex;
     align-items: center;
     width: 100%;
+    margin-top: -7rem;
     
 }
 
@@ -82,6 +90,7 @@ h2 {
 
 .Other-services-section{
     background-color: #D4AF37;
+    padding: 2em 3rem 0;
 }
 
 .Other-services-section h2 {
