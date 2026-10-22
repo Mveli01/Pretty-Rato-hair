@@ -66,7 +66,7 @@ main {
     background-size: cover;
     background-position: center;
     width: 100%;
-    margin-bottom: 5rem;
+    margin-bottom: 1rem;
     padding: 0 8rem;
     min-height: 70vh;
     display: flex;
@@ -99,11 +99,7 @@ main {
   font-weight: 400;
   line-height: 1.6;
 }
-@media (min-width: 768px) {
-  .content-container {
-    grid-template-columns: 1fr 1fr; 
-  }
-}
+
  
 
 h1 {
@@ -112,9 +108,57 @@ h1 {
 
 h2 {
     font-size: 2.5rem;
-    color: #D4AF37;
+    color: #d4af37;
     font-family: "Playfair Display", serif;
     margin-bottom: 2rem;
+}
+
+.service-section {
+    background-image: url("Hair pic 4.jpeg");
+    background-size: cover;
+    background-position: center;
+    padding: 2rem 0;
+}
+
+.service-section h2{
+    text-align: center;
+    color: #d4af37;
+    margin-bottom: 5rem;
+}
+
+.services-wrapper {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px;
+    margin: 1rem auto 0 auto;
+    
+}
+
+.services-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+    max-width: 40%;
+    padding: 1.5rem;
+    background: rgba(0, 0, 0, 0.6)
+}
+
+.service-list ul{
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+.services-list li {
+    font-family: play;
+    font-weight: bold;
+    font-size: 1.5rem;
+    list-style: none;
+    padding: 0.8rem 0;
+    color: #f1eeee;
+    text-align: center;
 }
 
 .service-section, .location-section {
@@ -122,73 +166,6 @@ h2 {
     padding-bottom: 5rem;
 }
 
-.services-wrapper {
-    display: flex;
-    align-items: center;
-    width: 100%;
-    margin-top: 2rem;
-    
-}
-
-.services-list {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    margin-left: 4rem;
-    margin-right: 4rem;
-    padding: 1rem;
-}
-
-.services-list li {
-    font-weight: bold;
-    font-size: 1.5rem;
-    list-style: none;
-    padding: 1rem;
-    color: #313030;
-}
-
-.model-image2 {
-    width: 35%;
-    height: auto;
-    border-radius: 2em;
-    margin: 0;
-    
-}
-
-.Other-services-section{
-    background-color: #D4AF37;
-    padding: 2em 3rem 0;
-}
-
-.Other-services-section h2 {
-    color: #161616;
-    font-family: "Playfair Display", serif;
-    font-size: 2rem;
-}
-
-.Other-services-section ul{
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-.other-services-wrapper {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 20rem;
-    width: 100%;
-}
-
-.other-services-wrapper ul {
-    margin: 0 2rem;
-}
-
-li {
-    font-size: 1.5rem;
-    line-height: 2.7;
-    color: #ffffff;
-}
 
 .Booking-section {
     background-color: #161616;
