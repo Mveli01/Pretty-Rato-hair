@@ -1,3 +1,6 @@
+/* ==========================================
+   1. GLOBAL STYLES & RESET
+   ========================================== */
 *, *::before, *::after {
     box-sizing: border-box;
     margin: 0;
@@ -5,15 +8,10 @@
 }
 
 body {
-
     margin: 0;
-    padding: 0.5em 0;
-}
-
-header {
+    padding: 0;
     background-color: #0c0c0c;
-    border-bottom: 0.5em solid #D4AF37;
-    width: 100%;
+    overflow-x: hidden; /* Prevents unwanted horizontal scrolling */
 }
 
 .container {
@@ -21,8 +19,28 @@ header {
     width: 100%;
     margin-right: auto;
     margin-left: auto;
-    padding-right: 2rem;
-    padding-left: 2rem;
+    padding-right: 1.5rem;
+    padding-left: 1.5rem;
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+h2 {
+    font-family: "Playfair Display", serif;
+    font-size: 2.5rem;
+    color: #d4af37;
+    margin-bottom: 2rem;
+}
+
+/* ==========================================
+   2. HEADER & NAVIGATION
+   ========================================== */
+header {
+    background-color: #0c0c0c;
+    border-bottom: 0.5em solid #D4AF37;
+    width: 100%;
 }
 
 nav {
@@ -40,25 +58,28 @@ nav {
     display: block;
 }
 
-
-
 .nav-links {
     display: flex;
     list-style: none;
-    gap: 3rem;
-    
+    gap: 2rem;
 }
 
 nav a {
     color: white;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     text-decoration: none;
+    transition: color 0.2s ease;
 }
 
+nav a:hover {
+    color: #D4AF37;
+}
 
+/* ==========================================
+   3. HERO SECTION (HOME)
+   ========================================== */
 main {
     text-align: center;
-    border-top: 0.5em solid #D4AF37;
 }
 
 .home-section {
@@ -66,8 +87,7 @@ main {
     background-size: cover;
     background-position: center;
     width: 100%;
-    margin-bottom: 0;
-    padding: 0 8rem;
+    padding: 4rem 1rem;
     min-height: 70vh;
     display: flex;
     align-items: center;
@@ -76,66 +96,57 @@ main {
 }
 
 .content-container {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 2rem;
-  align-items: center;
-  text-align: center;
-  background: rgba(0, 0, 0, 0.5); 
-  padding: 3rem;
-  border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: center;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.6); 
+    padding: 3rem 2rem;
+    border-radius: 8px;
+    max-width: 800px;
+    width: 100%;
 }
+
 .content-container h1 {
-  color: #D4AF37;
-  font-size: 3rem;
-  margin: 0;
+    color: #D4AF37;
+    font-size: 3rem;
+    margin: 0;
+    line-height: 1.2;
 }
 
 .welcome-message {
-  margin: 0;
-  padding-left: 1.5rem;
-  font-style: italic;
-  color: #f0f0f0;
-  font-size: 1.4rem;
-  font-weight: 400;
-  line-height: 1.6;
+    margin: 0;
+    font-style: italic;
+    color: #f0f0f0;
+    font-size: 1.4rem;
+    font-weight: 400;
+    line-height: 1.6;
 }
 
- 
-
-h1 {
-    font-size: 3rem;
-}
-
-h2 {
-    font-size: 2.5rem;
-    color: #d4af37;
-    font-family: "Playfair Display", serif;
-    margin-bottom: 2rem;
-}
-
+/* ==========================================
+   4. SERVICES SECTION
+   ========================================== */
 .service-section {
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("Hair pic 4.jpeg");
     background-size: cover;
     background-position: center;
-    padding: 2rem 0;
-    margin-top: 0;
+    padding: 5rem 0;
     border-top: #d4af37 solid;
 }
 
-.service-section h2{
+.service-section h2 {
     text-align: center;
     color: #d4af37;
-    margin-bottom: 5rem;
+    margin-bottom: 3rem;
 }
 
 .services-wrapper {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    gap: 2rem;
     width: 100%;
-    max-width: 1200px;
-    margin: 1rem auto 0 auto;
-    
+    margin-top: 1rem;
 }
 
 .services-list {
@@ -143,90 +154,89 @@ h2 {
     flex-direction: column;
     align-items: center;
     flex: 1;
-    max-width: 40%;
-    padding: 1.5rem;
-    background: rgba(0, 0, 0, 0.6)
+    max-width: 45%;
+    padding: 2rem;
+    background: rgba(0, 0, 0, 0.65);
+    border-radius: 4px;
 }
 
-.service-list ul{
+.services-list ul {
     padding: 0;
     margin: 0;
     width: 100%;
+    list-style: none;
 }
 
 .services-list li {
     font-family: 'Playfair Display', serif;
     font-weight: 700;
-    font-size: 1.5rem;
-    list-style: none;
+    font-size: 1.4rem;
     padding: 0.8rem 0;
     color: #f1eeee;
     text-align: center;
 }
 
-.service-section, .location-section {
-    padding-top: 5rem;
-    padding-bottom: 5rem;
-}
-
-
+/* ==========================================
+   5. BOOKING SECTION
+   ========================================== */
 .Booking-section {
     background-color: #161616;
-    padding: 2em 3rem 5rem;
-    line-height: 2.0;
-    padding-bottom: 5rem;
+    padding: 5rem 0;
 }
 
 .booking-content {
     display: flex;
     align-items: center;
-    justify-content: flex-start;
-    gap: 3rem;
+    justify-content: center;
+    gap: 4rem;
 }
 
 .image-container {
-    flex: 0 0 25%;
-    max-width: 25%;
+    flex: 0 0 30%;
+    max-width: 30%;
 }
 
 .bookings-photo {
-  width: 100%;
-  height: auto;
-  display: block;
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
 }
 
 .text-container {
     flex: 1;
+    text-align: left;
 }
 
 .Booking-section h2 {
     color: #f1c40f;
-    font-size: 2rem;
-    margin: 0 0 0.5rem 0;
+    font-size: 2.2rem;
+    margin: 0 0 1rem 0;
 }
 
 .Booking-section p {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     color: #ffffff;
-    margin: 0 0 1.5rem 0;
+    line-height: 1.6;
+    margin: 0 0 2rem 0;
 }
 
-.button-wrapper {
-  margin-bottom: 0.95rem;
+.booking-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
 }
 
 .booking-buttons a {
     text-decoration: none;
     display: inline-block;
+    padding: 0.8rem 2rem;
     font-size: 1.1rem;
-    padding: 0.75em 1.5em;
-    font-size: 1.2rem;
     font-weight: bold;
     border-radius: 0.5rem;
     text-align: center;
     transition: background-color 0.3s ease, transform 0.2s ease;
     min-width: 12.5rem;
-    margin-bottom: 1rem;
 }
 
 .booking-btn {
@@ -236,26 +246,290 @@ h2 {
 
 .whatsapp-btn {
     background-color: #f1c40f;
-    transform: translateY(-0.125rem);
     color: #161616;
 }
 
+.booking-buttons a:hover {
+    transform: translateY(-2px);
+    opacity: 0.9;
+}
 
-
-
+/* ==========================================
+   6. CONTACT SECTION
+   ========================================== */
 .contact-section {
     background-color: #D4AF37;
-    padding: 2em 3rem 0;
-    line-height: 2.0;
-    padding-bottom: 9rem;
+    padding: 5rem 0; 
+    text-align: center;
 }
 
 .contact-section h2 {
     color: #161616;
-    font-family: "Playfair Display", serif;
-    font-size: 2rem;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
 }
 
-iframe {
+.contact-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem; 
+    font-size: 1.2rem;
+    font-family: sans-serif; 
+}
+
+.contact-item i {
+    color: #161616;
+    font-size: 1.3rem;
+}
+
+.contact-item a {
+    color: #161616;
+    text-decoration: none;
+    transition: opacity 0.2s ease;
+    font-weight: 500;
+}
+
+.contact-item a:hover {
+    opacity: 0.7; 
+}
+
+/* ==========================================
+   7. LOCATION SECTION
+   ========================================== */
+.location-section {
+    background: linear-gradient(135deg, #D4AF37 0%, #1a1a1a 45%, #000000 100%);
+    padding: 5rem 0;
+    color: #ffffff;
+    font-family: sans-serif;
+}
+
+.location-layout {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 4rem;
+}
+
+.location-info {
+    flex: 1;
+    text-align: left;
+}
+
+.location-map {
+    flex: 1.2;
+    width: 100%;
+}
+
+.location-title {
+    color: #D4AF37; 
+    font-family: "Playfair Display", serif;
+    font-size: 2.8rem;
+    margin-bottom: 1.5rem;
+}
+
+.address-box {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    margin-bottom: 2rem;
+}
+
+.address-box i {
+    color: #D4AF37;
+    font-size: 1.3rem;
+    margin-top: 0.2rem;
+}
+
+.address-box p {
+    font-size: 1.2rem;
+    line-height: 1.5;
+    color: #f5f5f5;
+    margin: 0;
+}
+
+.directions-btn {
+    display: inline-block;
+    border: 1px solid #D4AF37;
+    color: #D4AF37;
+    padding: 0.75rem 2rem;
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.directions-btn:hover {
+    background-color: #D4AF37;
+    color: #111111;
+}
+
+.location-map iframe {
+    width: 100%;
+    display: block;
     border-radius: 2em;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+}
+
+/* ==========================================
+   8. FOOTER SECTION
+   ========================================== */
+footer {
+    background: linear-gradient(to bottom, #111111 0%, #333333 30%, #D4AF37 100%);
+    padding: 3rem 1.5rem 2rem;
+    text-align: center;
+    font-family: sans-serif;
+}
+
+.footer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.2rem;
+}
+
+footer p {
+    margin: 0;
+    font-size: 0.95rem;
+    letter-spacing: 0.5px;
+}
+
+.copyright {
+    color: #aaaaaa; 
+}
+
+.developer {
+    color: #161616; 
+    font-weight: 500;
+    font-size: 0.85rem;
+}
+
+.footer-socials a {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #ffffff; 
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.footer-socials i {
+    font-size: 1.3rem;
+}
+
+.footer-socials a:hover {
+    color: #161616; 
+    transform: translateY(-2px);
+}
+
+/* ==========================================
+   9. MOBILE RESPONSIVE MEDIA QUERIES (768px and below)
+   ========================================== */
+@media (max-width: 768px) {
+    /* Global Typography Updates */
+    h1 { font-size: 2.2rem !important; }
+    h2 { font-size: 2rem !important; }
+
+    /* Navigation Layout */
+    nav {
+        flex-direction: column;
+        gap: 1rem;
+        padding-left: 0;
+        padding-right: 0;
+    }
+    
+    .nav-links {
+        gap: 1.5rem;
+        padding: 0;
+    }
+
+    nav a {
+        font-size: 1rem;
+    }
+
+    /* Hero Section */
+    .home-section {
+        padding: 3rem 0;
+    }
+
+    .content-container {
+        padding: 2rem 1.2rem;
+    }
+
+    .welcome-message {
+        font-size: 1.1rem;
+    }
+
+    /* Services Section Layout Collapse */
+    .services-wrapper {
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5rem;
+    }
+
+    .services-list {
+        max-width: 100%;
+        width: 100%;
+        padding: 1.5rem;
+    }
+
+    .services-list li {
+        font-size: 1.2rem;
+    }
+
+    /* Booking Section */
+    .booking-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 2rem;
+    }
+
+    .image-container {
+        max-width: 60%;
+        flex: 0 0 100%;
+    }
+
+    .text-container {
+        text-align: center;
+    }
+
+    .booking-buttons {
+        justify-content: center;
+    }
+
+    /* Contact Details */
+    .contact-section h2 {
+        font-size: 2rem;
+    }
+
+    .contact-item {
+        font-size: 1.1rem;
+    }
+
+    /* Location & Map Layout Adjustment */
+    .location-layout {
+        flex-direction: column;
+        gap: 2.5rem;
+        text-align: center;
+    }
+    
+    .location-info {
+        text-align: center;
+    }
+
+    .address-box {
+        justify-content: center;
+    }
+
+    .location-map iframe {
+        height: 320px; /* Reduces height on mobile for improved screen fit */
+    }
 }
