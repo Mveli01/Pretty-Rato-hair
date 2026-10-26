@@ -530,6 +530,6 @@ footer p {
     }
 
     .location-map iframe {
-        height: 320px; /* Reduces height on mobile for improved screen fit */
+        height: 320px; 
     }
 }
