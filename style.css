@@ -125,7 +125,7 @@ main {
 }
 
 /* ==========================================
-   4. SERVICES SECTION
+   4. SERVICES SECTION (Individual Cards Update)
    ========================================== */
 .service-section {
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("Hair pic 4.jpeg");
@@ -141,40 +141,174 @@ main {
     margin-bottom: 3rem;
 }
 
+/* Outer slider viewport framework */
+.services-carousel-slider {
+    width: 100%;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+}
+
+.services-carousel-slider::-webkit-scrollbar {
+    display: none; /* Keeps it modern and completely clean */
+}
+
+/* Flex framework to force cards to line up cleanly in a row */
 .services-wrapper {
     display: flex;
-    justify-content: center;
-    gap: 2rem;
-    width: 100%;
-    margin-top: 1rem;
+    gap: 1.5rem;
+    width: max-content;
+    padding: 1rem 0;
 }
 
-.services-list {
+/* The Service Card Styling */
+.service-card {
+    scroll-snap-align: start;
     display: flex;
-    flex-direction: column;
     align-items: center;
-    flex: 1;
-    max-width: 45%;
-    padding: 2rem;
-    background: rgba(0, 0, 0, 0.65);
-    border-radius: 4px;
-}
-
-.services-list ul {
-    padding: 0;
-    margin: 0;
-    width: 100%;
-    list-style: none;
-}
-
-.services-list li {
+    justify-content: center;
+    text-align: center;
+    
+    /* Desktop Calculation: Fits exactly 4 full cards per viewport frame width */
+    width: calc((100vw - (3 * 1.5rem) - 40px) / 4);
+    max-width: 280px; 
+    height: 180px; /* Squares/Rectangles to match nicely with gallery symmetry */
+    padding: 1.5rem;
+    
+    background: rgba(0, 0, 0, 0.75);
+    border-radius: 6px;
+    border: 1px solid rgba(212, 175, 55, 0.3);
+    
     font-family: 'Playfair Display', serif;
     font-weight: 700;
-    font-size: 1.4rem;
-    padding: 0.8rem 0;
+    font-size: 1.2rem;
     color: #f1eeee;
-    text-align: center;
+    transition: transform 0.3s ease, border-color 0.3s ease;
 }
+
+.service-card:hover {
+    transform: translateY(-4px);
+    border-color: #d4af37;
+}
+
+/* Optional styling states if you want to visually separate category blocks */
+.text-wig {
+    border-left: 3px solid #d4af37;
+}
+.text-beauty {
+    border-left: 3px solid #fff;
+}
+
+.service-dir {
+    color: #D4AF37;
+    font-size: 1.5rem;
+}
+
+/* ==========================================
+   6. RESPONSIVE BREAKPOINTS (Added Service Rules)
+   ========================================== */
+@media (max-width: 1024px) {
+    .service-card {
+        width: calc((100vw - (2 * 1.5rem) - 40px) / 3); /* 3 cards on intermediate tablets */
+    }
+}
+
+@media (max-width: 768px) {
+    .service-card {
+        /* Mobile Calculation: Shows exactly 2 cards per view frame side-scrolling */
+        width: calc((100vw - (1 * 1.5rem) - 40px) / 2);
+        height: 150px;
+        font-size: 1.05rem;
+    }
+}
+
+
+
+/* ==========================================
+   5. GALLERY SECTION (Pure Slider Approach)
+   ========================================== */
+.gallery-section {
+    background: #f9f7f7; 
+    padding: 5rem 0;
+    border-top: #d4af37 solid;
+}
+
+.gallery-section h2 {
+    text-align: center;
+    color: #d4af37;
+    margin-bottom: 3rem;
+}
+
+.gallery-carousel-slider {
+    width: 100%;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+}
+
+.gallery-carousel-slider::-webkit-scrollbar {
+    display: none;
+}
+
+.gallery-wrapper {
+    display: flex;
+    gap: 1.5rem;
+    width: max-content;
+    padding: 1rem 0;
+}
+
+.gallery-item {
+    scroll-snap-align: start;
+    /* Desktop constraint rule: Fits exactly 4 images visible sequentially per slide screen frame width */
+    width: calc((100vw - (3 * 1.5rem) - 40px) / 4);
+    max-width: 280px; 
+    height: 380px;
+    overflow: hidden;
+    border-radius: 4px;
+    border: 1px solid rgba(212, 175, 55, 0.2);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.04);
+}
+
+.gallery-dir {
+    color: #050505;
+    font-size: 1.5rem;
+}
+
+
+/* ==========================================
+   6. RESPONSIVE BREAKPOINTS (Mobile & Tablet)
+   ========================================== */
+@media (max-width: 1024px) {
+    /* Tablet Rules: Adjust columns down smoothly */
+    .gallery-item {
+        width: calc((100vw - (2 * 1.5rem) - 40px) / 3); /* Shows 3 on intermediate display width scales */
+    }
+}
+
+@media (max-width: 768px) {
+    .services-list {
+        width: calc(100vw - 40px); /* Shows 1 clean structured full list card clearly per view frame on mobile */
+        max-width: 100%;
+    }
+    
+    .gallery-item {
+        width: calc((100vw - (1 * 1.5rem) - 40px) / 2); /* Shows exactly 2 pictures per view dynamically side-scrolling */
+        height: 280px;
+    }
+}
+
 
 /* ==========================================
    5. BOOKING SECTION
