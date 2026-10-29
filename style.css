@@ -667,3 +667,321 @@ footer p {
         height: 320px; 
     }
 }
+
+
+/* ==========================================
+   RESPONSIVE SERVICE CARDS & GALLERY
+   ========================================== */
+
+/* Keep both carousels in horizontal rows */
+.services-carousel-slider,
+.gallery-carousel-slider {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+}
+
+.services-wrapper,
+.gallery-wrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 1.5rem;
+    width: max-content;
+    padding: 1rem 0;
+}
+
+/* Desktop: up to 4 cards/images visible */
+.service-card,
+.gallery-item {
+    flex: 0 0 calc((100vw - 6rem) / 4);
+    max-width: 280px;
+    scroll-snap-align: start;
+}
+
+/* Tablet: 3 cards/images visible */
+@media (max-width: 1024px) {
+    .service-card,
+    .gallery-item {
+        flex-basis: calc((100vw - 6rem) / 3);
+    }
+}
+
+/* Mobile: exactly 2 cards/images visible */
+@media (max-width: 768px) {
+    .service-card,
+    .gallery-item {
+        flex: 0 0 calc((100vw - 4.5rem) / 2);
+        max-width: none;
+    }
+
+    .service-card {
+        height: 150px;
+        padding: 1rem;
+        font-size: 1rem;
+    }
+
+    .gallery-item {
+        height: 280px;
+    }
+}
+
+
+/* ==========================================
+   GENERAL RESPONSIVE STYLING
+   ========================================== */
+
+img,
+iframe {
+    max-width: 100%;
+}
+
+.container {
+    min-width: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+section[id] {
+    scroll-margin-top: 1rem;
+}
+
+/* Tablet and smaller laptops */
+@media (max-width: 1024px) {
+    .container {
+        padding-left: 1.25rem;
+        padding-right: 1.25rem;
+    }
+
+    .booking-content {
+        gap: 2rem;
+    }
+
+    .location-layout {
+        gap: 2rem;
+    }
+
+    .welcome-message {
+        font-size: 1.2rem;
+    }
+}
+
+/* Phones and smaller tablets */
+@media (max-width: 768px) {
+    /* Navigation */
+    nav {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .logo-image {
+        width: 150px;
+    }
+
+    .nav-links {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.75rem 1.25rem;
+    }
+
+    nav a {
+        font-size: 0.95rem;
+    }
+
+    /* Headings */
+    h1,
+    .content-container h1 {
+        font-size: 2.2rem;
+    }
+
+    h2,
+    .contact-section h2 {
+        font-size: 2rem;
+    }
+
+    /* Hero */
+    .home-section {
+        min-height: 60vh;
+        padding: 3rem 0;
+    }
+
+    .content-container {
+        padding: 2rem 1.2rem;
+    }
+
+    .welcome-message {
+        font-size: 1.05rem;
+    }
+
+    /* Services and gallery */
+    .service-section,
+    .gallery-section {
+        padding: 3rem 0;
+    }
+
+    .service-section h2,
+    .gallery-section h2 {
+        margin-bottom: 1.5rem;
+    }
+
+    .service-dir,
+    .gallery-dir {
+        margin-top: 0.75rem;
+        font-size: 1rem;
+    }
+
+    .gallery-section h3 {
+        margin-bottom: 1rem;
+        font-size: 1.1rem;
+    }
+
+    /* Booking */
+    .Booking-section {
+        padding: 3rem 0;
+    }
+
+    .booking-content {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .image-container {
+        flex: 0 1 auto;
+        width: 100%;
+        max-width: 320px;
+    }
+
+    .text-container {
+        width: 100%;
+        text-align: center;
+    }
+
+    .Booking-section p {
+        font-size: 1.1rem;
+    }
+
+    .booking-buttons {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .button-row {
+        width: 100%;
+    }
+
+    .booking-buttons a {
+        display: block;
+        width: 100%;
+        min-width: 0;
+    }
+
+    /* Contact */
+    .contact-section {
+        padding: 3rem 0;
+    }
+
+    .contact-item {
+        max-width: 100%;
+        font-size: 1rem;
+        overflow-wrap: anywhere;
+    }
+
+    /* Location */
+    .location-section {
+        padding: 3rem 0;
+    }
+
+    .location-layout {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .location-info {
+        width: 100%;
+        text-align: center;
+    }
+
+    .location-title {
+        font-size: 2rem;
+    }
+
+    .address-box {
+        justify-content: center;
+        text-align: left;
+    }
+
+    .location-map {
+        width: 100%;
+        min-width: 0;
+    }
+
+    .location-map iframe {
+        width: 100%;
+        height: 300px;
+        border-radius: 1rem;
+    }
+
+    /* Testimonials */
+    .testimonial-section {
+        padding: 3rem 1rem;
+    }
+
+    .testimonial-wrapper {
+        width: 100%;
+        max-width: 100%;
+        margin: 0 auto;
+    }
+
+    /* Footer */
+    footer {
+        padding: 2rem 1rem;
+    }
+
+    .footer-container {
+        gap: 1rem;
+    }
+
+    .copyright,
+    .developer {
+        line-height: 1.6;
+        overflow-wrap: anywhere;
+    }
+}
+
+/* Very narrow phones */
+@media (max-width: 380px) {
+    .container {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    .nav-links {
+        gap: 0.75rem;
+    }
+
+    nav a {
+        font-size: 0.9rem;
+    }
+
+    .content-container {
+        padding: 1.5rem 1rem;
+    }
+
+    .service-card {
+        font-size: 0.9rem;
+        padding: 0.75rem;
+    }
+
+    .gallery-item {
+        height: 240px;
+    }
+}
+
