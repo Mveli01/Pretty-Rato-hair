@@ -242,6 +242,10 @@ main {
     margin-bottom: 3rem;;
 }
 
+.gallery-section p{
+    margin-bottom: 1rem;
+}
+
 .gallery-carousel-slider {
     width: 100%;
     overflow-x: auto;
