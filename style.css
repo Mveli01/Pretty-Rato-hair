@@ -34,6 +34,8 @@ h2 {
     margin-bottom: 2rem;
 }
 
+
+
 /* ==========================================
    2. HEADER & NAVIGATION
    ========================================== */
@@ -237,7 +239,7 @@ main {
 .gallery-section h2 {
     text-align: center;
     color: #d4af37;
-    margin-bottom: 3rem;
+    margin-bottom: 3rem;;
 }
 
 .gallery-carousel-slider {
@@ -984,4 +986,6 @@ section[id] {
         height: 240px;
     }
 }
+
+
 
